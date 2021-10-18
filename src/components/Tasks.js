@@ -43,18 +43,29 @@ const Tasks = () => {
       tasksId: myTasksId,
     }
 
+    // On clone les colonnes et on met a jour la colonne concerné
+    const newColumns = {
+      columns: {
+        ...datas.columns,
+        [myColumnIndex]: newColumn
+      }
+    }
+
+    // On transforme l'objet colonnes en tableau
+    const columnsArray = Object.values(newColumns.columns)
+
+
     // On met à jour le state
     const newState = {
       ...datas,
       columns: [
-        ...datas.columns,
-        newColumn[myColumnIndex]
+        ...columnsArray
       ]
     }
 
-    // setDatas(newState)
+    setDatas(newState)
 
-    // return
+    return
   }
 
   return (
