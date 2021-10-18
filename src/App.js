@@ -1,7 +1,9 @@
+import Tasks from "./components/Tasks"
+
 function App() {
   return (
     <div className="App">
-      <p>Ma page APP</p>
+      <Tasks />
     </div>
   )
 }
